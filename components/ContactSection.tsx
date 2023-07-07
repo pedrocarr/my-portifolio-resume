@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 import emailjs from "emailjs-com";
-import dotenv from 'dotenv';
-
-dotenv.config({ path: '.env' });
+require("dotenv").config();
 
 const config = {
-  serviceId: process.env.SERVICE_ID,
-  templateId: process.env.TEMPLATE_ID,
-  userId: process.env.USER_ID,
+  serviceId: process.env.NEXT_PUBLIC_SERVICE_ID,
+  templateId: process.env.NEXT_PUBLIC_TEMPLATE_ID,
+  userId: process.env.NEXT_PUBLIC_USER_ID,
 }
+
+
 
 const ContactSection: React.FC = () => {
   const [name, setName] = useState("");

@@ -70,7 +70,7 @@ const companies = [
       "Monitoring: AWS Cloudwatch and Datadog;",
     ],
     image: "/accenture.png",
-    link: "https://platoio.com/register",
+    link: "https://accenture.com",
   },
   {
     name: "NeXTIME",

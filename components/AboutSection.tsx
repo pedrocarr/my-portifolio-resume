@@ -1,5 +1,7 @@
+"use-client"
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const skills = [
   { skill: "HTML", image: "/html.svg" },
@@ -14,8 +16,20 @@ const skills = [
 ];
 
 const schools = [
-  { school: "School of Mines", degree: "Engineering", year: "2017", image: "/escolademinas.png" },
-  { school: "Le Wagon", degree: "Web Development", year: "2021", image: "/lewagon.png" },
+  {
+    school: "School of Mines",
+    degree: "Engineering",
+    year: "2017",
+    image: "/escolademinas.png",
+    link: "http://www.em.ufop.br/",
+  },
+  {
+    school: "Le Wagon",
+    degree: "Web Development",
+    year: "2021",
+    image: "/lewagon.png",
+    link: "https://www.lewagon.com/"
+  },
 ];
 
 const AboutSection = () => {
@@ -60,7 +74,7 @@ const AboutSection = () => {
               and that&#39;s what I strive to do, I have a passion for
               technology and a desire to always push the limits of what is
               possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+              always open to new opportunities.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
@@ -87,20 +101,22 @@ const AboutSection = () => {
             </div>
             <h1 className="text-2xl font-bold mt-2 mb-6">Education</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-            {schools.map((item, idx) => {
+              {schools.map((item, idx) => {
                 return (
                   <div key={idx} className="flex items-center mr-8 mb-4">
-                    {item.image ? (
-                      <Image
-                        src={item.image}
-                        alt=""
-                        width={60}
-                        height={100}
-                        className="rounded-xl"
-                      />
-                    ) : (
-                      <div className="w-8 h-8 mr-2 bg-gray-300"></div>
-                    )}
+                    <Link href={item.link}>
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt=""
+                          width={60}
+                          height={100}
+                          className="rounded-xl"
+                        />
+                      ) : (
+                        <div className="w-8 h-8 mr-2 bg-gray-300"></div>
+                      )}
+                    </Link>
                     <p className="font-bold ml-2">{item.school}</p>
                     <p className="ml-2">{item.degree}</p>
                     <p className="font-bold ml-2">{item.year}</p>
