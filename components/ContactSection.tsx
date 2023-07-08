@@ -8,9 +8,7 @@ const config = {
   serviceId: process.env.NEXT_PUBLIC_SERVICE_ID,
   templateId: process.env.NEXT_PUBLIC_TEMPLATE_ID,
   userId: process.env.NEXT_PUBLIC_USER_ID,
-}
-
-
+};
 
 const ContactSection: React.FC = () => {
   const [name, setName] = useState("");
@@ -19,6 +17,7 @@ const ContactSection: React.FC = () => {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [isEmailSent, setIsEmailSent] = useState(false); // Track the email sending status
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -80,6 +79,7 @@ const ContactSection: React.FC = () => {
         )
         .then((response) => {
           console.log("Email sent successfully!", response.text);
+          setIsEmailSent(true); // Set the email sent status to true
         })
         .catch((error) => {
           console.error("Error sending email:", error);
@@ -154,12 +154,18 @@ const ContactSection: React.FC = () => {
               {messageError && <p className="text-red-500 mt-2 text-xs italic">{messageError}</p>}
             </div>
             <div className="flex justify-center">
-              <button
-                className="text-neutral-100 font-semibold px-6 py-2 bg-blue-600 rounded shadow hover:bg-blue-700"
-                type="submit"
-              >
-                <RiMailSendLine className="inline-block mr-2" /> Send Email
-              </button>
+              {isEmailSent ? (
+                <p className="text-blue-600 font-semibold">
+                  Email sent successfully!
+                </p>
+              ) : (
+                <button
+                  className="text-neutral-100 font-semibold px-6 py-2 bg-blue-600 rounded shadow hover:bg-blue-700"
+                  type="submit"
+                >
+                  <RiMailSendLine className="inline-block mr-2" /> Send Email
+                </button>
+              )}
             </div>
           </form>
         </div>
