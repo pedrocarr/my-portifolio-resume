@@ -16,7 +16,7 @@ const HeroSection = () => {
     setIsInView(inView);
   }, [inView]);
 
-  const animateText = (text) => {
+  const animateText = (text: string) => {
     const chars = text.split("");
 
     chars.forEach((char, index) => {
