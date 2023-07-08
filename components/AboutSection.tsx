@@ -1,4 +1,4 @@
-"use-client"
+"use-client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +11,7 @@ const skills = [
   { skill: "React", image: "/react.svg" },
   { skill: "Git", image: "/git.svg" },
   { skill: "MongoDB", image: "/mongodb1.svg" },
-  { skill: "SQL", image: '/database1.png' },
+  { skill: "SQL", image: "/database1.png" },
   { skill: "AWS", image: "/aws.svg" },
 ];
 
@@ -28,7 +28,7 @@ const schools = [
     degree: "Web Development",
     year: "2021",
     image: "/lewagon.png",
-    link: "https://www.lewagon.com/"
+    link: "https://www.lewagon.com/",
   },
 ];
 
@@ -47,23 +47,25 @@ const AboutSection = () => {
             </h1>
             <p>
               Hi, my name is Pedro and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
+              <span className="font-bold">{" problem solver"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
               <span className="font-bold">{" driven"}</span> software engineer
               based in Prague, CZ.
             </p>
             <br />
             <p>
-              I graduated from School of Mines, Ouro Preto, Brazil in 2017 with
+              I graduated from the School of Mines, Ouro Preto, Brazil in 2017 with
               a BS in Environmental Engineering, but I always had a passion for
-              tech. Backend for living, frontend for fun.
+              tech. Backend for living, frontend for fun. Le Wagon bootcamp
+              helped me to get into the  field and since then I have been
+              facing a lot of challenges.
             </p>
             <br />
             <p>
               I have a wide range of hobbies and passions that keep me busy.
               From reading, playing sports, traveling, cooking, I am always
               seeking new experiences and love to keep myself engaged and
-              learning new things.
+              learning new things, especially new languages and cultures.
             </p>
             <br />
             <p>
@@ -71,10 +73,7 @@ const AboutSection = () => {
               <span className="font-bold text-blue-500">
                 never stop growing
               </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities.
+              and once you are learning you are not failing.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
