@@ -56,7 +56,7 @@ const HeroSection = () => {
             <span className="font-semibold text-blue-600">
               Software Engineer{" "}
             </span>
-            based in Prague, CZ. Always looking for improve myself and deliver
+            based in Prague, CZ. Always looking to improve myself and deliver
             my best.
           </p>
           <Link
