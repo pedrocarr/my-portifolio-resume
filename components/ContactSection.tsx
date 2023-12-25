@@ -109,7 +109,7 @@ const ContactSection: React.FC = () => {
                 }`}
                 id="name"
                 type="text"
-                placeholder="Your name"
+                placeholder="Bob"
                 value={name}
                 onChange={handleNameChange}
               />
@@ -128,7 +128,7 @@ const ContactSection: React.FC = () => {
                 }`}
                 id="email"
                 type="email"
-                placeholder="Your email"
+                placeholder="bob@example.com"
                 value={email}
                 onChange={handleEmailChange}
               />
@@ -147,7 +147,7 @@ const ContactSection: React.FC = () => {
                 }`}
                 id="message"
                 rows={4}
-                placeholder="Your message"
+                placeholder="I would like to send you a job offer..."
                 value={message}
                 onChange={handleMessageChange}
               ></textarea>
