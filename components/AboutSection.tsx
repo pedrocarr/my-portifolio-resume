@@ -8,6 +8,7 @@ const skills = [
   { skill: "CSS", image: "/css.svg" },
   { skill: "JavaScript", image: "/javascript.svg" },
   { skill: "TypeScript", image: "/typescript.svg" },
+  { skill: "React", image: "/react.svg" },
   { skill: "Ruby", image: "/ruby.svg" },
   { skill: "Rails", image: "/rubyonrails.svg" },
   { skill: "Git", image: "/git.svg" },
